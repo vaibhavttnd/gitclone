@@ -2,7 +2,7 @@ package "git" do
   action :install
 end
 
-include_recipe 'apache'
+include_recipe 'vaibhav::apache'
 
 #install git if required
 
@@ -40,7 +40,7 @@ if Dir.exist?("/home/ubuntu/git")
          action :sync
        end
 else
-       execute "sudo mkdir /home/ubuntu/git" #do
+       execute "sudo mkdir /home/ubuntu/git" 
 end
 
 
