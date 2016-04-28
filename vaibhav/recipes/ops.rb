@@ -39,9 +39,7 @@ if Dir.exist?("/home/ubuntu/git")
          action :sync
        end
 else
-       execute "sudo mkdir /home/ubuntu/git2" #do
-     #  not_if { Dir.exist?("/home/ubuntu/git") }
-#end
+       execute "sudo mkdir /home/ubuntu/git" #do
 end
 
 
