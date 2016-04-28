@@ -3,8 +3,7 @@ package "git" do
 end
 
 execute "touch vaibhav.txt" do
-  if { Dir.exist?("/home/ubuntu/git") }
-  end
+  not_if { File.exist?("/vol/postgres/data") }
 end
 
 git "/home/ubuntu/git" do
