@@ -17,19 +17,31 @@ end
 #  not_if { Dir.exist?("/home/ubuntu/bit") }
 #end
 
-#clone if directory exits
+#clone if directory exits , but git by itself can create a new directory and clone in it
 
-if Dir.exist?("/home/ubuntu/abc")
-	git "/home/ubuntu/git" do
-	  repository "https://github.com/vaibhavttnd/gitclone.git"
-   	  reference "master"
-  	  action :sync
-	end
+#if Dir.exist?("/home/ubuntu/git")
+#	  git "/home/ubuntu/git" do
+#	  repository "https://github.com/vaibhavttnd/gitclone.git"
+#   	  reference "master"
+#  	  action :sync
+#	end
+#else
+#	execute "touch /home/ubuntu/notexist2.txt" do
+#        not_if { Dir.exist?("/home/ubuntu/bit") }
+#end
+#end
+
+
+if Dir.exist?("/home/ubuntu/git")
+         git "/home/ubuntu/git" do
+         repository "https://github.com/vaibhavttnd/gitclone.git"
+         reference "master"
+         action :sync
+       end
 else
-	execute "touch /home/ubuntu/notexist2.txt" do
-        not_if { Dir.exist?("/home/ubuntu/bit") }
+       execute "sudo mkdir /home/ubuntu/git" #do
+     #  not_if { Dir.exist?("/home/ubuntu/git") }
+#end
 end
 
-
-end
 
