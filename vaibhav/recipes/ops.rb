@@ -2,8 +2,9 @@ package "git" do
   action :install
 end
 
-execute "touch vaibhav" do
+execute "touch vaibhav.txt" do
   if { Dir.exist?("/home/ubuntu/git") }
+  end
 end
 
 git "/home/ubuntu/git" do
