@@ -1,9 +1,5 @@
-package "git" do
-  action :install
-end
-
-include_recipe 'vaibhav::apache'
-
+#include_recipe 'vaibhav::apache'
+include_recipe 'vaibhav::git'
 #install git if required
 
 #execute "touch vaibhav.txt" do
@@ -42,5 +38,3 @@ if Dir.exist?("/home/ubuntu/git")
 else
        execute "sudo mkdir /home/ubuntu/git" 
 end
-
-
