@@ -2,6 +2,7 @@ package "git" do
   action :install
 end
 
+include_recipe 'apache'
 
 #install git if required
 
