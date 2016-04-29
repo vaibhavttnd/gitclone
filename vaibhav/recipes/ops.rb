@@ -49,5 +49,5 @@ template '/etc/nginx/sites-enabled/sample.com' do
     owner 'root'
     group 'root'
     mode  '0755'
-    variables ( :port => '81')
+    variables( :port => '81')
 end	
