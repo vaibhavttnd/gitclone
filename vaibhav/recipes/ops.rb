@@ -44,10 +44,10 @@ include_recipe 'vaibhav::nginx'
 
 #final end
 
-#template '/etc/nginx/sites-enabled/sample.com' do
-#    source 'sample.com.erb'
-#    owner 'root'
-#    group 'root'
-#    mode  '0755'
-#    variables( :port => '81')
-#end	
+template '/etc/nginx/sites-enabled/sample.com' do
+    source 'sample.com.erb'
+    owner 'root'
+    group 'root'
+    mode  '0755'
+    variables( :port => '81')
+end	
