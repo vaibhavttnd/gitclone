@@ -57,4 +57,6 @@ template '/etc/nginx/sites-enabled/vh2' do
     group 'root'
     mode  '0755'
     variables( :port => '81')
-end	
+end
+
+execute "sudo service nginx restart"	
